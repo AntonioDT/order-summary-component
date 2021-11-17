@@ -1,0 +1,33 @@
+@import "variables";
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    
+    font-family: 'Red Hat Display';
+}
+
+.flex {
+    display: flex;
+    &-between {
+        justify-content: space-between;
+    }
+    &-center {
+        justify-content: center;
+    }
+}
+
+.visible-large {
+    display: none;
+   @media (min-width: $breakpoint-large) {
+       display: block;
+   } 
+}

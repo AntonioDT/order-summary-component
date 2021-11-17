@@ -1,0 +1,117 @@
+@import "globals";
+@import "variables";
+
+.page-wrapper {
+    min-height: 800px;
+    background-color: $paleBlue;
+    position: relative;
+    .desktop-background {
+        width: 100%;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: 0;
+    }
+}
+
+.body-wrapper {
+    text-align: center;
+    padding: 50px 30px;
+    
+}
+
+.card {
+    z-index: 1;
+    min-width: 280px;
+    width: 300px;
+    background-color: white;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.card-header {
+    height: 145px;
+    img {
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.card-body {
+    padding: 30px 20px;
+    .title {
+        margin: 0;
+        color: $darkBlue;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .description {
+        margin: 30px 0 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: $desaturatedBlue;
+    }
+    .plan {
+        margin-top: 30px;
+        padding: 15px;
+        background-color: $veryPaleBlue;
+        border-radius: 10px;
+        align-items: center;
+        .cost {
+            align-items: center;
+            > div {
+                margin-left: 15px;
+                font-size: 13px;
+                > div {
+                    color: $darkBlue;
+                    font-weight: 700;
+                }
+            }
+            .subscription {
+                color: $desaturatedBlue;
+            }
+        }
+        .change {
+            a {
+                font-size: 15px;
+                text-decoration: underline;
+                color: rgb(148, 43, 247);
+                cursor: pointer;
+                :visited {
+                    color: rgb(148, 43, 247);
+                }
+            }
+        }
+    }
+    .payment {
+        background-color: $brightBlue;
+        color: white;
+        font-family: 'Red Hat Display';
+        font-weight: 500;
+        margin-top: 20px;
+        border-radius: 10px;
+        height: 48px;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        box-shadow: 0px 13px 11px -1px rgba(192, 192, 204, 1);
+        &:hover {
+            opacity: 0.8;
+            transition: 200ms ease-in;
+        }
+    }
+    .cancel {
+        margin-top: 20px;
+        a {
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 900;
+            color: $desaturatedBlue;
+            &:visited {
+                color: $desaturatedBlue;
+            }
+        }
+    }
+    
+}
